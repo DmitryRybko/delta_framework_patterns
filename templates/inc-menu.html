@@ -1,0 +1,32 @@
+<div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="http://localhost:8080/">simple<span class="logo_colour">style_horizon</span></a></h1>
+          <h2>Simple. Contemporary. Website Template.</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+            <li><a href="http://localhost:8080/">Home</a></li>
+            <li><a href="http://localhost:8080/courses/">Courses</a></li>
+            <li><a href="http://localhost:8080/student-list/">Students</a></li>
+            <li><a href="http://localhost:8080/about/">About</a></li>
+            <li><a href="http://localhost:8080/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+<script>
+    let current = 0;
+    let nav_menu = document.getElementById("menu")
+
+    for (let i = 0; i < nav_menu.children.length; i++) {
+            if (nav_menu.children[i].firstChild.href === nav_menu.children[i].baseURI) {
+            nav_menu.children[i].className = 'selected'
+            }
+    }
+    // }
+</script>

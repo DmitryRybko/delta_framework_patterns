@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+  <div id="main">
+
+    <div id="content_header"></div>
+    <div id="site_content">
+<!--      <div id="banner"></div>-->
+      {% include "inc-sidebar.html" %}
+      <div id="content">
+        <h1>Регистрация студента</h1>
+        <form method="post">
+
+            <input type="text" name="name" placeholder="Имя">
+            <button type="submit">Сохранить</button>
+
+            <p></p>
+            <h2>Browser Compatibility</h2>
+                <p>This template has been tested in the following browsers:</p>
+                <ul>
+                  <li>Internet Explorer 9</li>
+                  <li>FireFox 25</li>
+                  <li>Google Chrome 31</li>
+                </ul>
+        </form>
+
+      </div>
+    </div>
+    {% endblock %}
+</div>

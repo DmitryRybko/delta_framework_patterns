@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div id="main">
+
+    <div id="content_header"></div>
+    <div id="site_content">
+        <!--      <div id="banner"></div>-->
+        {% include "inc-sidebar.html" %}
+        <div id="content">
+            <h1>Список студентов</h1>
+
+            <table>
+                <tr><th>Student Name</th></tr>
+                {% for item in objects_list %}
+                <tr>
+                    <td>{{item.name}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+            <a href="http://localhost:8080/create-student/">Зарегистрировать студента</a>
+            <p></p>
+            <a href="http://localhost:8080/add-student/">Записать студента на курс</a>
+            </ul>
+
+        </div>
+    </div>
+    {% endblock %}
+</div>
+

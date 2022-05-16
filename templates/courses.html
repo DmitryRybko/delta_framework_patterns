@@ -1,0 +1,36 @@
+{%extends "base.html" %}
+
+{% block body %}
+  <div id="main">
+
+    <div id="content_header"></div>
+    <div id="site_content">
+<!--      <div id="banner"></div>-->
+      {% include "inc-sidebar.html" %}
+      <div id="content">
+
+        <h1>Courses to Study Design Patterns</h1>
+         <a href="http://localhost:8080/categorylist/">Список категорий</a>
+          <table>
+            <tr><th>Course Name</th></tr>
+
+            {% for item in objects_list %}
+                <tr><td>{{item.name}}</td></tr>
+            {% endfor %}
+
+          </table>
+
+          <a href="http://localhost:8080/createcourse/?id=0">Создать онлайн курс</a>
+
+        <h2>Browser Compatibility</h2>
+        <p>This template has been tested in the following browsers:</p>
+        <ul>
+          <li>Internet Explorer 9</li>
+          <li>FireFox 25</li>
+          <li>Google Chrome 31</li>
+        </ul>
+      </div>
+    </div>
+    {% endblock %}
+
+  </div>
